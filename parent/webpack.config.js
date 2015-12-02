@@ -9,7 +9,7 @@ module.exports = {
     },
     devtool: 'source-map',
     module: {
-        preloaders: [
+        preLoaders: [
             {test: /\.js$/, loader: 'source-map'}
         ],
         loaders: [
