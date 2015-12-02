@@ -13,3 +13,25 @@ npm link ../child
 npm run build
 open dist/index.html
 ```
+
+### Resulting index.js
+```javascript
+var ChildService = (function () {
+    function ChildService() {
+    }
+    ChildService.prototype.doSomething = function () {
+        return "Hello World";
+    };
+    return ChildService;
+})();
+exports.ChildService = ChildService;
+//# sourceMappingURL=index.js.map
+
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ../child/dist/index.js
+ ** module id = 1
+ ** module chunks = 0
+ **/
+```
