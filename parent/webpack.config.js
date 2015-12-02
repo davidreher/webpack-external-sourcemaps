@@ -7,11 +7,11 @@ module.exports = {
         path: 'dist',
         filename: 'bundle.js'
     },
-    /*devtool: 'source-map',*/
+    devtool: 'source-map',
     module: {
-        /*preloaders: [
+        preloaders: [
             {test: /\.js$/, loader: 'source-map'}
-        ],*/
+        ],
         loaders: [
             {test: /\.ts$/, loader: 'ts'}
         ]
