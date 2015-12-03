@@ -5,12 +5,9 @@ External sourcemaps in webpack are broken. This is a repo to repro this issue.
 
 ```bash
 cd child
-npm install
-npm run build
+npm run prepare
 cd ../parent
-npm install
-npm link ../child
-npm run build
+npm run prepare
 open dist/index.html
 ```
 
