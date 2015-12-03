@@ -1,5 +1,7 @@
 var path = require('path');
 
+var nodeModulesPath = path.join(__dirname, 'node_modules');
+
 module.exports = {
   context: __dirname,
     entry: './index.ts',
@@ -9,17 +11,12 @@ module.exports = {
     },
     devtool: 'source-map',
     module: {
-        preLoaders: [
-            {test: /\.js$/, loader: 'source-map'}
-        ],
+        preLoaders: [{ test: /\.js$/, loader: 'source-map' }],
         loaders: [
-            {test: /\.ts$/, loader: 'ts'}
+            { test: /\.ts$/, loader: 'babel!ts' },
+            { test: /\.js$/, loader: 'babel' },
         ]
     },
-    resolve: {
-        fallback: path.join(__dirname, 'node_modules')
-    },
-    resolveLoader: {
-        fallback: path.join(__dirname, 'node_modules')
-    }
+    resolve: { fallback: nodeModulesPath },
+    resolveLoader: { fallback: nodeModulesPath }
 };
