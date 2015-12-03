@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare": "npm install && npm link ../child && npm run build",
     "build": "webpack -d"
   },
   "keywords": [],
